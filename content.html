@@ -20,7 +20,7 @@
 <body>
 
 
- <h1><a href="index.html">Wait for it!!!</a></h1>
+ <h1><a href="index.html"><div class="timer">6</div></a></h1>
 
 <a href="https://fabioyo.github.io/memes/index.html"  target="_blank"><img src="memes.png" alt="1"></a>
 <a href="https://fabioyo.github.io/arthhistory/"  target="_blank"><img src="arthistory.png" alt="2"></a>
@@ -63,6 +63,17 @@ function loadingimage() {
   }); 
 }
 loadingimage();</script>
+
+<script type="text/javascript">
+	var timer = 6;
+
+var interval = setInterval(function() {
+    timer--;
+    $('.timer').text(timer);
+    if (timer === 0) clearInterval(interval);
+}, 1000);
+
+</script>
 
 </body>
 </html>
